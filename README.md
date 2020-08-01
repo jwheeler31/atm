@@ -1,3 +1,8 @@
+Note to interviewers:
+- As this was a first attempt at a full-stack application, I relied heavily on several guides, including:
+    - [React.js and Spring Data REST](https://spring.io/guides/tutorials/react-and-spring-data-rest/)
+
+
 # ATM design problem
 This project should take approximately four hours to complete.
 
@@ -68,9 +73,11 @@ Returns the account’s transaction history.
 - Otherwise, returns the transaction history in reverse chronological order (most recent transaction first) in the format:
 		`<date> <time> <amount> <balance after transaction>`
 For example:
-    > `2020-02-04 13:04:22 -20.00 140.67`
-    > `2020-02-04 13:04:01 60.44 160.67`
-    > `2020-02-04 13:03:49 35.00 100.23`
+    > ```
+    > 2020-02-04 13:04:22 -20.00 140.67
+    > 2020-02-04 13:04:01 60.44 160.67
+    > 2020-02-04 13:03:49 35.00 100.23
+    > ```
 
 ### LOG OUT
 Deactivates the currently authorized account.
@@ -78,9 +85,17 @@ Deactivates the currently authorized account.
 - If an account is currently authorized, returns:
 	> Account <account_id> logged out.
 - Otherwise, returns:
-    >No account is currently authorized.
+    > No account is currently authorized.
 
 ### END
 Shuts down the server.
 `end`
 - Returns nothing, and ends the program.
+
+## Initial Data
+| ACCOUNT_ID | PIN  | BALANCE  |
+|:----------:|:----:|---------:|
+| 2859459814 | 7386 | 10.24    |
+| 1434597300 | 4557 | 90000.55 |
+| 7089382418 | 0075 | 0.00     |
+| 2001377812 | 5950 | 60.00    |
